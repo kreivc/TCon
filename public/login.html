@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="xhr.js" defer></script>
 </head>
 <body>
     <div class="content">
@@ -17,20 +18,18 @@
             <div>Ready To Consul?</div>
         </div>
         <div class="content-wraper">
-            <form action="index.html" method="POST">
+            <form method="GET" action="index.html">
                 <div class="login-form">
                     <label for="username"><b>Username :</b></label>
-                    <p><input type="text" name="username" id="" placeholder="Username"><p>
+                    <p><input type="text" name="username" id="email" placeholder="Username"><p>
                     <label for="username"><b>Password :</b></label>
-                    <p><input type="password" placeholder="Password"></p>
+                    <p><input type="password" id="password" placeholder="Password"></p>
                 </div>
 
-                <p class="login-btn"><input type="submit" value="SIGN IN" class="button"></p>
+                <p class="login-btn"><input onclick="testPost()" type="submit" value="SIGN IN" class="button"></p>
                 <p class="register-btn"><b>Don't have an account?<a href="#"> Sign Up </a><b></p>
             </form>
-          
         </div>
     </div>
-    
 </body>
 </html>
