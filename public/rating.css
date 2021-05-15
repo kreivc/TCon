@@ -1,0 +1,110 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.header img{
+    margin-left: 30px;
+}
+
+.header .thank-you{
+    text-align: center;
+    color: #52C8FA;
+    font-size: 40px;
+}
+
+.content{
+    display: flex;
+    padding-top: 70px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .wraper{
+    background-color: #e7e6e6;
+    width: 400px;
+    height: 450px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+}
+
+.content .text{
+    padding-top: 20px;
+    line-height: 5px;
+    color: #748A9D;
+}
+
+.consultant img{
+    padding-top: 5px;
+    border-radius: 50%;
+}
+
+.content button {
+  position: relative;
+  background-color: #52C8FA;
+  border: none;
+  font-size: 15px;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 190px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.content button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.content button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0.3s
+}
+
+.consultant p{
+    font-size: 18px;
+    color: #748A9D;
+}
+
+.rate{
+    padding-bottom: 15px;
+}
+
+.content input{
+    border: none;
+    border-radius: 20px;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    margin-top: 6px;
+}
