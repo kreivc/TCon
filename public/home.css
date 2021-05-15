@@ -1,0 +1,150 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.logo{
+    margin-left: 10px;
+}
+
+.search-box{
+    border: solid gray 1px;
+    padding: 10px;
+    border-radius: 50px;
+    width: 600px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input{
+    border: 0;
+    outline: none;
+    width: 580px;
+}
+
+.search-box .icon{
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.info{
+    padding: 12px 15px;
+    margin-right: 20px;
+    color: gray;
+}
+
+.info .user {
+    font-size: 20px;
+}
+
+.info .user span{
+    color: #52C8FA;
+}
+
+.info .logout{
+    color: red;
+    text-align: center;
+}
+
+
+.content{
+    margin-top: 150px;
+    text-align: center;
+    color: #748A9D;
+    width: 100%;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.footer .wraper{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(235, 233, 233);
+    border-radius: 35px;
+    width: 480px;
+    height: 80px;
+    margin: 35px auto;
+    align-items: center;
+}
+
+.footer-items{
+    margin: 0 auto;
+    margin-top: 2px;
+}
+
+.footer-items a{
+    padding: 0 13px;
+    text-decoration: none;
+}
+
+
+:root {
+  --timing: 25000ms;
+  --width: 50px;
+  --height: 18px;
+}
+
+.carousel {
+  display: flex;
+  animation: var(--timing) linear 0.5s infinite normal both running carousel;
+}
+
+.carousel:hover {
+  animation-play-state: paused;
+}
+
+
+.item {
+  display: flex;
+  width: 1000px;
+  height: 200px;
+  padding: 0 38px;
+  box-sizing: content-box;
+}
+
+.item a img{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.15);
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 35px;
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
