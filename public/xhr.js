@@ -18,8 +18,10 @@ const testPost = () => {
         }
     });
 
-    xhr.open("GET", "http://localhost:5000/auth/login?=");
+    xhr.open("GET", "https://tcon-api.herokuapp.com/auth/login?=");
     xhr.setRequestHeader("Content-Type", "application/json");
+    // email login = admin@email.com
+    // password = adminpwd
 
     xhr.send(data);
 }
