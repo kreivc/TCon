@@ -43,23 +43,24 @@ body, html{
     margin-right: 50px;
 }
 
-.info{
+.sign-in{
     padding: 12px 15px;
+    border-radius: 40px;
+    background-color: rgb(230, 230, 230);
+    border: 0;
+    outline: none;
     margin-right: 20px;
-    color: gray;
 }
 
-.info .user {
-    font-size: 20px;
-}
-
-.info .user span{
+.sign-in a{
+    padding: 0;
+    border: none;
+    background: none;
     color: #52C8FA;
-}
-
-.info .logout{
-    color: red;
-    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.98rem;
+    text-decoration: none;
 }
 
 
@@ -67,9 +68,7 @@ body, html{
     margin-top: 150px;
     text-align: center;
     color: #748A9D;
-    width: 100%;
 }
-
 
 .footer{
     position: absolute;
@@ -82,7 +81,7 @@ body, html{
     display: flex;
     flex-wrap: nowrap;
     background-color: rgb(235, 233, 233);
-    border-radius: 35px;
+    border-radius: 25px;
     width: 480px;
     height: 80px;
     margin: 35px auto;
@@ -99,52 +98,37 @@ body, html{
     text-decoration: none;
 }
 
-
-:root {
-  --timing: 25000ms;
-  --width: 50px;
-  --height: 18px;
-}
-
-.carousel {
-  display: flex;
-  animation: var(--timing) linear 0.5s infinite normal both running carousel;
-}
-
-.carousel:hover {
-  animation-play-state: paused;
-}
-
-
-.item {
-  display: flex;
-  width: 1000px;
-  height: 200px;
-  padding: 0 38px;
-  box-sizing: content-box;
-}
-
-.item a img{
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.15);
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-radius: 35px;
-}
-
-.carousel-container {
-    display: flex;
-    width: 100%;
-}
-
-@keyframes carousel {
-  0% {
-    transform: translateX(0%);
+.info{
+    padding: 12px 15px;
+    margin-right: 20px;
+    color: gray;
   }
-  100% {
-    transform: translateX(-100%);
+  
+  .info .user {
+    font-size: 20px;
   }
-}
+  
+  .info .user span{
+    color: #52C8FA;
+  }
+  
+  .info .logout{
+    text-align: center;
+  }
+  
+  .logout a{
+    text-decoration: none;
+    color: red;
+  }
+
+  .carousel-inner .item img{
+      width: 700px;
+      margin: 0 auto;
+      border-radius: 25px;
+  }
+
+  .carousel-inner{
+    height: 350px;
+  }
+
+  
