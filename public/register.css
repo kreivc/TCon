@@ -6,11 +6,13 @@ body, html{
 
 .content{
     margin-top: 80px;
-    color: #748A9D;
-    display: flex;
-    justify-content: space-around;   
+    color: #748A9D;  
     margin-left: 300px;
     margin-right: 300px;
+}
+.content > form{
+    display: flex;
+    justify-content: space-around;   
 }
 
 
