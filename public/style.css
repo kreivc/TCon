@@ -97,3 +97,55 @@ body, html{
     padding: 0 13px;
     text-decoration: none;
 }
+
+#custom-search-input {
+    margin:0;
+    margin-top: 10px;
+    padding: 0;
+    border: 0;
+    outline: none;
+    width: 580px;
+}
+
+#custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    
+    border: solid gray 1px;
+    padding: 22px 10px;
+    border-radius: 50px;
+    width: 600px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 50px;
+    color:#52C8FA;
+}
+
+.search-query:focus + button {
+    z-index: 3;   
+}
