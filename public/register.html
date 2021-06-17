@@ -9,24 +9,32 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="xhr.js" defer></script>
+    <script src="JS/Auth.js" defer></script>
 </head>
 <body>
     <div class="content">
-        <form method="POST" action="login.html"></form>
+        <form method="POST" onsubmit="return RegisterForm()">
             <div class="content-wraper">
                 <h1>Register Form</h1>
                 <div class="register-form">
-                    <label for="username"><b>Username :</b></label>
-                    <p><input type="text" name="username" id="username" placeholder="Username"><p>
+                    <label for="firstName"><b>First Name :</b></label>
+                    <p><input type="text" name="firstName" id="firstName" placeholder="Last Name"><p>
+                    
+                    <label for="lastName"><b>Last Name :</b></label>
+                    <p><input type="text" name="lastName" id="lastName" placeholder="Last Name"><p>
+                    
                     <label for="email"><b>Email :</b></label>
-                    <p><input type="text" name="username" id="username" placeholder="Username"><p>
-                    <label for="email"><b>Phone Number :</b></label>
-                    <p><input type="text" name="phone" id="phone" placeholder="Phone Number"><p>
+                    <p><input type="email" name="email" id="email" placeholder="Email"><p>
+
+                    <label for="phoneNumber"><b>Phone Number :</b></label>
+                    <p><input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number"><p>
+
                     <label for="password"><b>Password :</b></label>
                     <p><input type="password" id="password" placeholder="Password"></p>
-                    <label for="password"><b>Re Password :</b></label>
+
+                    <label for="re-password"><b>Re Password :</b></label>
                     <p><input type="password" id="re-password" placeholder="Re-Password"></p>
+
                 </div>
             </div>
             <div class="logo-wrapper">
