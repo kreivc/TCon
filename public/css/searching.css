@@ -102,6 +102,10 @@ body, html{
     color: red;
   }
 
+  .slider a{
+      text-decoration: none;
+  }
+
 
 .information{
     background-color: white;
