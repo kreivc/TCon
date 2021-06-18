@@ -90,6 +90,7 @@ body, html{
   
   .info .user span{
     color: #52C8FA;
+    text-transform: capitalize;
   }
   
   .info .logout{
