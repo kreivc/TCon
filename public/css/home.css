@@ -22,6 +22,8 @@ body, html{
     margin-left: 10px;
 }
 
+.logo
+
 
 .sign-in{
     padding: 12px 15px;
@@ -102,6 +104,7 @@ body, html{
     color: red;
   }
 
+  
 
   .carousel-inner img {
     width: 100%;

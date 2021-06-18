@@ -1,0 +1,152 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.back{
+    margin-left: 20px;
+}
+
+.back a{
+    text-decoration: none;
+}
+
+.back a img{
+    width: 45px;
+}
+
+.title{
+    color: #52C8FA;
+    font-size: 40px;
+}
+
+.name, .phone-email{
+    display: flex;
+    justify-content: space-around;
+}
+
+.pass{
+    display: flex;
+    justify-content: center;
+}
+
+.save-btn{
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.content{
+    margin-top: 80px;
+    color: #748A9D;  
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.detail{
+    margin: 10px;
+}
+
+.detail input{
+    border-radius: 50px;
+    border: #748A9D 1px;
+    border-style: solid;
+    padding: 12px 20px;
+    width: 300px;
+    margin: 0 20px;
+}
+
+.detail label{
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+
+.save-btn input{
+    width: 120px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 40px;
+    background: none;
+    background-color: #52C8FA;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.content-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile-wrapper{
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.pic img{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    
+}
+
+.pname{
+    display: flex;
+    justify-content: space-around;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.footer .wraper{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(241, 241, 241);
+    border-radius: 25px;
+    width: 480px;
+    height: 80px;
+    margin: 35px auto;
+    align-items: center;
+}
+
+.footer-items{
+    margin: 0 auto;
+    margin-top: 2px;
+}
+
+.footer-items a{
+    padding: 0 13px;
+    text-decoration: none;
+}
+
