@@ -75,14 +75,7 @@ function RegisterForm(){
     stat = res["status"];
     console.log(res)
     if(stat){
-        window.localStorage.removeItem('userId');
-        window.localStorage.setItem('userId', res["userId"]);
-        window.localStorage.setItem('email', res["email"]);
-        window.localStorage.setItem('isConsultant', res["isConsultant"]);
-        window.localStorage.setItem('name', res["name"]);
-        window.localStorage.setItem('phone', res["phone"]);
-
-        window.open('home.html?id='+res["userId"], "_self");
+        window.open("login.html", "_self");
         return true;
     }
     else{
