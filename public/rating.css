@@ -97,7 +97,8 @@ body, html{
 }
 
 .rate{
-    padding-bottom: 15px;
+    padding-bottom: 25px;
+
 }
 
 .content input{
@@ -108,3 +109,40 @@ body, html{
     text-align: center;
     margin-top: 6px;
 }
+
+
+.rating { 
+    border: none;
+    text-align: center;
+    margin-right: 120px;
+  }
+  
+  .rating > input { display: none; } 
+  .rating > label:before { 
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+  }
+  
+  .rating > .half:before { 
+    content: "\f089";
+    position: absolute;
+  }
+  
+  .rating > label { 
+    color: #ddd; 
+   float: right; 
+  }
+  
+  /***** CSS untuk hover nya *****/
+  
+  .rating > input:checked ~ label, /* memperlihatkan warna emas pada saat di klik */
+  .rating:not(:checked) > label:hover, /* hover untuk star berikutnya */
+  .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover untuk star sebelumnya  */
+  
+  .rating > input:checked + label:hover, /* hover ketika mengganti rating */
+  .rating > input:checked ~ label:hover,
+  .rating > label:hover ~ input:checked ~ label, /* seleksi hover */
+  .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
