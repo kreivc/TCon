@@ -19,6 +19,8 @@ function LoginForm(){
     stat = res["status"];
     console.log(res)
     if(stat){
+        window.localStorage.removeItem('userId');
+        window.localStorage.setItem('userId', res["userId"]);
         window.open('home.html?id='+res["userId"]);
         return true;
     }
@@ -79,4 +81,8 @@ function RegisterForm(){
         }
         return false;
     }
+}
+
+function logout(){
+    window.localStorage.removeItem('userId');
 }
