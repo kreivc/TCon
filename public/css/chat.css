@@ -1,0 +1,141 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.row{
+    display: flex;
+}
+
+.left{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    width: 55%;
+    padding: 1%;
+    background-color: whitesmoke;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 12px 0px 25px -5px rgba(0,0,0,0.62);
+    margin-right: 30px;
+}
+
+.right{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    width: 45%;
+    padding: 1%;
+    background-color: whitesmoke;
+}
+
+.title-consultant{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-consultant span{
+    padding: 0 20px;
+    font-size: 1rem;
+}
+
+.title-consultant img{
+    border-radius: 50%;
+}
+
+.chat-menu{
+    padding-top: 100px;
+}
+
+.countdown h1{
+    font-size: 5.5rem;
+    padding: 20px 5px;
+    margin: 0 70px 20px 70px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.feature{
+    justify-content: center;
+    align-items: center;
+}
+
+.chating{
+    margin: 0 auto;
+    /* overflow-y: scroll; */
+    width: 320px;
+}
+
+.countdown{
+    text-align: center;
+    align-items: center;
+}
+
+.end-chat{
+    padding: 5px;
+    text-align: center;
+    margin: 120px 110px 0 110px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.end-chat a{
+    color: white;
+    text-decoration: none;
+}
+
+.column{
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.feature a{
+    text-decoration: none;
+    padding: 0 4px;
+}
+
+.chat-item p{
+    display: flex;
+    align-items: center;
+    width: 320px;
+    min-height: 60px;
+    border: 1px solid #A6BCD0;
+    padding: 0 10px;
+    border-radius: 9px;
+}
+
+.consultant-chat p{
+    background-color: #52C8FA;
+}
+
+.sender-chat p{
+    background-color: #F0F4F8;
+}
+
+.type{
+    padding-top: 50px;
+    text-align: center;
+    margin-left: 35px;
+}
+
+.type input{
+    border-radius: 9px;
+    width: 320px;
+    min-height: 60px;
+    padding-left: 10px;
+    border: #A6BCD0 1px solid;
+}
+
+.type img{
+    position: relative;
+    z-index: 99;
+    right: 12%;
+    bottom: 21%;
+}
+
+.type a{
+    text-decoration: none;
+}
