@@ -1,3 +1,6 @@
+
+
+
 function LoginForm(){
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -21,7 +24,8 @@ function LoginForm(){
     if(stat){
         window.localStorage.removeItem('userId');
         window.localStorage.setItem('userId', res["userId"]);
-        window.open('home.html?id='+res["userId"]);
+        window.open('home.html?id='+res["userId"], "_self");
+        // window.location.href = 'home.html?id='+res["userId"];
         return true;
     }
     else{
@@ -69,7 +73,9 @@ function RegisterForm(){
     stat = res["status"];
     console.log(res)
     if(stat){
-        window.open('home.html?id='+res["userId"]);
+        window.localStorage.removeItem('userId');
+        window.localStorage.setItem('userId', res["userId"]);
+        window.open('home.html?id='+res["userId"], "_self");
         return true;
     }
     else{
@@ -84,5 +90,5 @@ function RegisterForm(){
 }
 
 function logout(){
-    window.localStorage.removeItem('userId');
+    localStorage.clear();
 }

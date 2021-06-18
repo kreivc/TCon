@@ -18,14 +18,13 @@
             <div>Ready To Consul?</div>
         </div>
         <div class="content-wraper">
-            <form method="GET" onsubmit="return LoginForm()">
+            <form method="GET" onreset="return LoginForm()">
                 <div class="login-form">
                     <label for="username"><b>Email :</b></label>
                     <p><input type="Email" name="Email" id="email" placeholder="Email"><p>
                     <label for="password"><b>Password :</b></label>
-                    <p><input  type="password" id="password" placeholder="Password"></p>
+                    <p id="pass"><input  type="password" id="password" placeholder="Password"></p>
                 </div>
-
                 <p id="login" class="login-btn"><input type="reset" value="SIGN IN" class="button"></p>
                 <p class="register-btn"><b>Don't have an account?<a href="register.html"> Sign Up </a><b></p>
             </form>
