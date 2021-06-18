@@ -1,6 +1,4 @@
 
-
-
 function LoginForm(){
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -24,8 +22,12 @@ function LoginForm(){
     if(stat){
         window.localStorage.removeItem('userId');
         window.localStorage.setItem('userId', res["userId"]);
+        window.localStorage.setItem('email', res["email"]);
+        window.localStorage.setItem('isConsultant', res["isConsultant"]);
+        window.localStorage.setItem('name', res["name"]);
+        window.localStorage.setItem('phone', res["phone"]);
+
         window.open('home.html?id='+res["userId"], "_self");
-        // window.location.href = 'home.html?id='+res["userId"];
         return true;
     }
     else{
@@ -75,6 +77,11 @@ function RegisterForm(){
     if(stat){
         window.localStorage.removeItem('userId');
         window.localStorage.setItem('userId', res["userId"]);
+        window.localStorage.setItem('email', res["email"]);
+        window.localStorage.setItem('isConsultant', res["isConsultant"]);
+        window.localStorage.setItem('name', res["name"]);
+        window.localStorage.setItem('phone', res["phone"]);
+
         window.open('home.html?id='+res["userId"], "_self");
         return true;
     }
@@ -87,8 +94,4 @@ function RegisterForm(){
         }
         return false;
     }
-}
-
-function logout(){
-    localStorage.clear();
 }
