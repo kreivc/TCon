@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="JS/Auth.js" defer></script>
+    <script src="JS/validateRegister.js"></script>
 </head>
 <body>
     <div class="content">
-        <form method="POST" onreset="return RegisterForm()">
+        <form method="POST">
             <div class="content-wraper">
                 <h1>Register Form</h1>
                 <div class="register-form">
@@ -34,18 +34,19 @@
 
                     <label for="re-password"><b>Re Password :</b></label>
                     <p><input type="password" id="re-password" placeholder="Re-Password"></p>
-
                 </div>
             </div>
             <div class="logo-wrapper">
                 <div class="logo">
-                    <img src="assets/logoTCon.png" alt="">
+                    <a href="index.html">
+                        <img src="assets/logoTCon.png" alt="">
+                    </a>
                 </div>
                 
                 <p><input type="checkbox"> Subscribe to out newsletter</p>
-                <p><input type="checkbox"> I agree with te <span>Term & Condition</span> and <span>Privacy Policy</span></p>
+                <p><input type="checkbox" id="agreeterms"> I agree with te <span>Term & Condition</span> and <span>Privacy Policy</span></p>
                 <div>
-                    <p id="register" class="register-btn"><input type="reset" value="SIGN UP" class="button"></p>
+                    <p id="register" class="register-btn"><input type="button" value="SIGN UP" class="button" onclick="return validateRegister()"></p>
                 </div>
             </div>
         </form>

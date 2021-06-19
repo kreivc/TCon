@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="JS/Auth.js" defer></script>
     <script src="JS/backtohome.js" defer></script>
+    <script src="JS/validateLogin.js"></script>
     
 </head>
 <body>
@@ -29,7 +29,7 @@
                     <label for="password"><b>Password :</b></label>
                     <p id="pass"><input type="password" name="password" id="password" placeholder="Password"></p>
                 </div>
-                <p id="login" class="login-btn"><input type="button" value="SIGN IN" class="button" onclick="return LoginForm()"></p>
+                <p id="login" class="login-btn"><input type="button" value="SIGN IN" class="button" onclick="return validateLogin()"></p>
                 <p class="register-btn"><b>Don't have an account?<a href="register.html"> Sign Up </a><b></p>
             </form>
         </div>
