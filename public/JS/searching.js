@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  initializeSlick();
+    //initialize();
+    // initializeSlick();
 });
 
 
@@ -17,8 +18,8 @@ Http.onreadystatechange = () => {
             // console.log(temp);
             dataConsult.innerHTML = temp;
         }
-        
-        initializeSlick(false);
+        initialize();
+        // initializeSlick(false);
     }
 }
 
@@ -31,13 +32,15 @@ function profileConsultantData(data) {
                     <div class="name">${data.name}</div>
                 </div>
                 </div>
-            </a>`;
+            </a>
+            `;
   }
 
   var keyword = document.getElementById("keyword");
   
   keyword.addEventListener('keyup', function (e) {
-    dataConsult.innerHTML = '';
+    var box = document.getElementById("slider");
+    box.style.display = "flex";
       const Http = new XMLHttpRequest();
       const url='https://tcon-api.herokuapp.com/consultant/getall';
       Http.open('GET', url);
@@ -48,20 +51,45 @@ function profileConsultantData(data) {
               let temp= ""; 
               console.log(keyword.value.toLowerCase());
               for (var i = 0; i < consultData.consultants.length; i++) {
-                  var search = consultData.consultants[i].name.toLowerCase();
+              
+                var search = consultData.consultants[i].name.toLowerCase();
                   if(search.includes(keyword.value.toLowerCase())){
                       temp+= profileConsultantData(consultData.consultants[i]);
                       dataConsult.innerHTML = temp;
                       
                   }
-                  dataConsult.innerHTML = '';
               }
-              initializeSlick(false);
+            initialize();
+            //initializeSlick(false);
           }  
           
       }
   });
 
+
+  
+function initialize(){
+    $('.customer-logos').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3600,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+}
 
   
 const SLICK_SLIDER_SETTINGS = {
@@ -89,10 +117,12 @@ function initializeSlick(init = true){
     const slickSection = '.customer-logos'
     if (init) {
         $(slickSection).slick(SLICK_SLIDER_SETTINGS);
+        $(slickSection).slick('unslick'); 
         return
     }
     $(slickSection).slick('unslick'); 
     $(slickSection).slick(SLICK_SLIDER_SETTINGS);
+ 
 }
 
 
