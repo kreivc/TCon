@@ -1,0 +1,108 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 7px 21px 5px rgba(0,0,0,0.5);
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.back{
+    margin-left: 20px;
+}
+
+.back a{
+    text-decoration: none;
+}
+
+.back a img{
+    width: 45px;
+}
+
+.title{
+    color: #52C8FA;
+    font-size: 40px;
+}
+
+.content-container{
+    margin-top: 10px;
+    padding: 30px;
+}
+
+.wrapper{
+    width: 300px;
+    margin: 12px auto;
+}
+
+.wrapper a div{
+    display: flex;
+    background-color: #F0F4F8;
+    padding: 8px 12px;
+    border-radius: 10px;
+    
+} 
+
+.information{
+    text-decoration: none;
+}
+
+.wrapper a{
+    text-decoration: none;
+    color: #748A9D; 
+}
+
+.icon{
+    width: 45px;
+    height: 45px;
+}
+
+
+.logout .information{
+    color: red;
+}
+
+.logout{
+    margin-top: 60px;
+}
+
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.footer .wraper{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(241, 241, 241);
+    border-radius: 25px;
+    width: 480px;
+    height: 80px;
+    margin: 35px auto;
+    align-items: center;
+}
+
+.footer-items{
+    margin: 0 auto;
+    margin-top: 2px;
+}
+
+.footer-items a{
+    padding: 0 13px;
+    text-decoration: none;
+}
+
