@@ -17,6 +17,7 @@ Http.onreadystatechange = () => {
             // console.log(temp);
             dataConsult.innerHTML = temp;
         }
+        
         initializeSlick(false);
     }
 }
@@ -36,6 +37,7 @@ function profileConsultantData(data) {
   var keyword = document.getElementById("keyword");
   
   keyword.addEventListener('keyup', function (e) {
+    dataConsult.innerHTML = '';
       const Http = new XMLHttpRequest();
       const url='https://tcon-api.herokuapp.com/consultant/getall';
       Http.open('GET', url);
@@ -45,14 +47,14 @@ function profileConsultantData(data) {
               var consultData = JSON.parse(Http.responseText);
               let temp= ""; 
               console.log(keyword.value.toLowerCase());
-              console.log(consultData);
               for (var i = 0; i < consultData.consultants.length; i++) {
                   var search = consultData.consultants[i].name.toLowerCase();
                   if(search.includes(keyword.value.toLowerCase())){
-                      temp+= profileConsultantData(consultData.data[i]);
+                      temp+= profileConsultantData(consultData.consultants[i]);
                       dataConsult.innerHTML = temp;
+                      
                   }
-                  
+                  dataConsult.innerHTML = '';
               }
               initializeSlick(false);
           }  
