@@ -3,6 +3,14 @@ $(document).ready(function(){
     // initializeSlick();
 });
 
+var username = localStorage.getItem("name");
+document.getElementById("username").innerHTML = username.split(" ")[0]; 
+
+function logout(){
+    localStorage.clear();
+}
+
+
 
 const dataConsult = document.querySelector(".slider");
 const Http = new XMLHttpRequest();
