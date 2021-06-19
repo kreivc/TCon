@@ -27,11 +27,39 @@ function profileConsultantData(data) {
                     <div class="profile">
                         <img src="assets/anonymus.jpg" alt="">
                     </div>
-                    <div class="name">#${data.name}</div>
+                    <div class="name">${data.name}</div>
                 </div>
                 </div>
             </a>`;
   }
+
+  var keyword = document.getElementById("keyword");
+  
+  keyword.addEventListener('keyup', function (e) {
+      const Http = new XMLHttpRequest();
+      const url='https://tcon-api.herokuapp.com/consultant/getall';
+      Http.open('GET', url);
+      Http.send();
+      Http.onreadystatechange = () => {
+          if (Http.readyState == 4 && Http.status == 200) {
+              var consultData = JSON.parse(Http.responseText);
+              let temp= ""; 
+              console.log(keyword.value.toLowerCase());
+              console.log(consultData);
+              for (var i = 0; i < consultData.consultants.length; i++) {
+                  var search = consultData.consultants[i].name.toLowerCase();
+                  if(search.includes(keyword.value.toLowerCase())){
+                      temp+= profileConsultantData(consultData.data[i]);
+                      dataConsult.innerHTML = temp;
+                  }
+                  
+              }
+              initializeSlick(false);
+          }  
+          
+      }
+  });
+
 
   
 const SLICK_SLIDER_SETTINGS = {
@@ -64,4 +92,6 @@ function initializeSlick(init = true){
     $(slickSection).slick('unslick'); 
     $(slickSection).slick(SLICK_SLIDER_SETTINGS);
 }
+
+
 
