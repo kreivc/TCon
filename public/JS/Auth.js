@@ -26,6 +26,7 @@ function LoginForm(){
         window.localStorage.setItem('isConsultant', res["isConsultant"]);
         window.localStorage.setItem('name', res["name"]);
         window.localStorage.setItem('phone', res["phone"]);
+        window.localStorage.setItem('password',password);
 
         window.open('home.html?id='+res["userId"], "_self");
         return true;
