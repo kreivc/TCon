@@ -1,0 +1,136 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.back{
+    margin-left: 20px;
+}
+.back a{
+    text-decoration: none;
+}
+
+.back a img{
+    width: 45px;
+}
+
+
+.content{
+    margin-top: 40px;
+    color: #748A9D;  
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.content-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.content1{
+    padding: 40px 80px;
+    border-radius: 15px;
+    background-color: #F9F9F9;
+    text-align: center;
+}
+
+.detail{
+    border-radius: 10px;
+    background-color: #F0F4F8;
+    padding: 16px 22px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+
+.time{
+    color: #AFC3D5;
+}
+
+
+.name{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pic{
+    margin-top: 20px;
+}
+.pic img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.container-btn{
+    text-align: center;
+}
+
+.btn-select{
+    background-color: #52C8FA;
+    border-radius: 25px;
+    padding: 8px 18px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.btn-select a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.btn-select a svg{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.btn-select a:hover{
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.content2-1 , .content2-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content2-1 div, .content2-2 div{
+    width: 360px;
+    margin-right: 26px;
+    margin-bottom: 20px;
+}
+
+.title{
+    color: #52C8FA;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.contents{
+    font-size: 16px;
+}
+
+.decimal{
+    font-weight: bold;
+}
+
+.pic-rating img{
+    height: 22px;
+}
