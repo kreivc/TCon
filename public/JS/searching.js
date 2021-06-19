@@ -24,7 +24,7 @@ Http.onreadystatechange = () => {
 }
 
 function profileConsultantData(data) {
-    return `<a href=""><div class="slide">
+    return `<a href="detailconsultant.html?userId=${data.userId}"><div class="slide">
                 <div class="information">
                     <div class="profile">
                         <img src="assets/anonymus.jpg" alt="">
@@ -35,6 +35,8 @@ function profileConsultantData(data) {
             </a>
             `;
   }
+
+ 
 
   var keyword = document.getElementById("keyword");
   
