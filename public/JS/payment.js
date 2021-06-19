@@ -17,7 +17,7 @@ function changeWallet(){
 function proceedChat(){
     const urlParams = new URLSearchParams(window.location.search);
     let tgtId = urlParams.get('targetId');
-    let myId = localStorage.get("userId");
+    let myId = localStorage.getItem("userId");
     var data = JSON.stringify({
         "sender": myId,
         "receiver": tgtId
@@ -25,7 +25,7 @@ function proceedChat(){
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = false;
 
-    xhr.open("POST", "https://tcon-api.herokuapp.com/user/getchatdetails", false);
+    xhr.open("POST", "https://tcon-api.herokuapp.com/user/newchat", false);
 
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.setRequestHeader("Access-Control-Allow-Credentials", true)
@@ -35,4 +35,5 @@ function proceedChat(){
     stat = res["status"];
     result = res['result'];
     console.log(result)
+    document.getElementById("cont-to-chat").href = "chat.html?cid="+result;
 }
