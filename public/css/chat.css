@@ -5,6 +5,19 @@ body, html{
     overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(203, 208, 212);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(203, 208, 212);
+}
+
 .row{
     display: flex;
 }
@@ -65,8 +78,10 @@ body, html{
 
 .chating{
     margin: 0 auto;
-    /* overflow-y: scroll; */
-    width: 320px;
+    overflow-y: auto;
+    height: 500px;
+    width: 340px;
+    /* background-color: red; */
 }
 
 .countdown{
@@ -143,7 +158,6 @@ body, html{
 
 
 #timer{
-    
     color: #748A9D;
     border-radius: 2px;
 }

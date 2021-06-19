@@ -18,7 +18,6 @@ function buildReceiverBubble(msg, tstamp){
 }
 
 
-
 const urlParams = new URLSearchParams(window.location.search);
 let currCID = urlParams.get('cid')
 
@@ -55,6 +54,9 @@ document.getElementById("chatting-box").innerHTML = parentAppend;
 
 function sendChat(){
     msgToSend = document.getElementById("type-msg").value;
+    if(msgToSend == ""){
+        return false
+    }
     const urlParams = new URLSearchParams(window.location.search);
     let currCID = urlParams.get('cid')
     var data = JSON.stringify({
@@ -82,12 +84,20 @@ function sendChat(){
 
 // timer
 
-var sec = 1800,countDiv = document.getElementById("timer"), secpass,
-    countDown = setInterval(function () {
-        'use strict';
-        
-        secpass();
-    }, 1000);
+
+var sec = parseInt(localStorage.getItem("countdown"));
+var countDiv = document.getElementById("timer"), secpass,
+
+countDown = setInterval(function () {
+    'use strict';
+    secpass();
+}, 1000);
+
+// if(localStorage.getItem("countdown") == ""){
+//     document.getElementById("type-msg").disabled = true;
+// }else{
+//     document.getElementById("type-msg").disabled = false;
+// }
 
 function secpass() {
     'use strict';
@@ -96,26 +106,28 @@ function secpass() {
         remSec  = sec % 60;
     
     if (remSec < 10) {
-        
         remSec = '0' + remSec;
-    
     }
     if (min < 10) {
-        
         min = '0' + min;
-    
     }
     countDiv.innerHTML = min + ":" + remSec;
-    
     if (sec > 0) {
-        
         sec = sec - 1;
-        
+        localStorage.setItem("countdown", sec)
     } else {
-        
         clearInterval(countDown);
-        
-        countDiv.innerHTML = 'countdown done';
-        
+        localStorage.removeItem("countdown")
+        countDiv.innerHTML = '00:00';
     }
+}
+
+var chatList = document.getElementById("chatting-box");
+chatList.scrollTop = chatList.scrollHeight;
+
+document.getElementById("end-chat").addEventListener("click", endChat)
+
+function endChat(){
+    localStorage.removeItem("countdown")
+    window.open("rating.html", "_self");
 }

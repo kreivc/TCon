@@ -36,4 +36,5 @@ function proceedChat(){
     result = res['result'];
     console.log(result)
     document.getElementById("cont-to-chat").href = "chat.html?cid="+result;
+    localStorage.setItem("countdown", 1800);
 }
