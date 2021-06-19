@@ -5,3 +5,7 @@ document.getElementById("username").innerHTML = username.split(" ")[0];
 function logout(){
     localStorage.clear();
 }
+
+$('#search').click(function() { 
+    document.location = 'searching.html';
+} );
