@@ -50,5 +50,5 @@ honor.innerHTML= res.details.honor;
 rating.innerHTML= res.details.rating;
 
 
-console.log(nameConsultant);
+document.getElementById("payment-reference").href = "payment.html?targetId="+userId
 
