@@ -83,40 +83,44 @@ body, html{
     padding: 12px 15px;
     margin-right: 20px;
     color: gray;
-  }
-  
-  .info .user {
+}
+
+.info .user {
     font-size: 20px;
-  }
-  
-  .info .user span{
+}
+
+.info .user span{
     color: #52C8FA;
     text-transform: capitalize;
-  }
-  
-  .info .logout{
+}
+
+.info .logout{
     text-align: center;
-  }
-  
-  .logout a{
+}
+
+.logout a{
     text-decoration: none;
     color: red;
-  }
+}
 
-  
 
-  .carousel-inner img {
-    width: 100%;
-    height: 50%;
+.carousel-inner img {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50%;
+    max-height: 50%;
     border-radius: 25px;
-    
-  }
-  
-  .carousel-inner .item img{
-      width: 700px;
-      height: 350px;
-      margin: 0 auto;
-  }
+}
+
+.carousel-inner .item img{
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 290px;
+    max-height: 290px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 25px;
+}
 
   
 #custom-search-input {
