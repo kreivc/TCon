@@ -16,18 +16,20 @@
 <body>
     <div class="content">
         <div class="logo">
-            <img src="assets/logoTCon.png" alt="">
+            <a href="index.html">
+                <img src="assets/logoTCon.png" alt="">
+            </a>
             <div>Ready To Consul?</div>
         </div>
         <div class="content-wraper">
-            <form method="GET" onreset="return LoginForm()">
+            <form method="GET">
                 <div class="login-form">
                     <label for="username"><b>Email :</b></label>
-                    <p><input type="Email" name="Email" id="email" placeholder="Email"><p>
+                    <p><input type="Email" name="email" id="email" placeholder="Email"><p>
                     <label for="password"><b>Password :</b></label>
-                    <p id="pass"><input  type="password" id="password" placeholder="Password"></p>
+                    <p id="pass"><input type="password" name="password" id="password" placeholder="Password"></p>
                 </div>
-                <p id="login" class="login-btn"><input type="reset" value="SIGN IN" class="button"></p>
+                <p id="login" class="login-btn"><input type="button" value="SIGN IN" class="button" onclick="return LoginForm()"></p>
                 <p class="register-btn"><b>Don't have an account?<a href="register.html"> Sign Up </a><b></p>
             </form>
         </div>
