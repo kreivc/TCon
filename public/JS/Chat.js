@@ -19,16 +19,15 @@ function updateFriendName(){
     stat = res["status"];
     result = res['result'];
     if(stat){
-        console.log(result)
         for (let i=0; i<=result.length; i++){
             if(result[i]['chatId'].localeCompare(currCID)==0){
                 document.getElementById("consultant-name").innerHTML = result[i]['friendNamme'];
-                document.getElementById("end-chat").href = "rating.html?fname="+result[i]['friendNamme'];
+                document.getElementById("end-chat-btn").href = "rating.html?fname="+result[i]['friendNamme'];
                 break;
             }
             else{
                 document.getElementById("consultant-name").innerHTML = "No Name";
-                document.getElementById("end-chat").href = "rating.html?fname=No Name";
+                document.getElementById("end-chat-btn").href = "rating.html?fname=No Name";
             }
         }
     }
