@@ -51,9 +51,11 @@ body, html{
     justify-content: center;
 }
 
+
 .coupon {
     border-radius: 12px;
-    box-shadow: 5px 8px 10px #d6d5d533
+    box-shadow: 5px 8px 10px #d6d5d533;
+    width: 350px;
 }
 
 .code:hover {
@@ -88,5 +90,9 @@ body, html{
 .footer-items a{
     padding: 0 13px;
     text-decoration: none;
+}
+
+.allVoucher{
+    padding: 0 400px 0 220px;
 }
 

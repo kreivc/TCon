@@ -66,6 +66,7 @@ body, html{
     height: 80px;
     margin: 35px auto;
     align-items: center;
+    box-shadow: 0px 9px 6px rgba(0,0,0,0.16);
 }
 
 .footer-items{
@@ -314,4 +315,13 @@ body, html{
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.searchImg{
+    z-index: 99;
+    right: 2%;
+    top: 30%;
+    position: absolute;
+    font-size: 2.2rem;
+    cursor: pointer;
 }

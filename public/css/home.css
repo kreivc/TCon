@@ -6,6 +6,10 @@ body, html{
     overflow: hidden;
 }
 
+.row{
+    display: flex;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -77,6 +81,7 @@ body, html{
     height: 80px;
     margin: 35px auto;
     align-items: center;
+    box-shadow: 0px 9px 6px rgba(0,0,0,0.16);
 }
 
 .footer-items{
@@ -149,7 +154,6 @@ body, html{
     padding-right: 4px \9;
     padding-left: 3px;
     padding-left: 4px \9;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
 
     margin-bottom: 0;
     -webkit-border-radius: 3px;
@@ -165,24 +169,15 @@ body, html{
     align-items: center;
 }
 
-#custom-search-input button {
-    border: 0;
-    background: none;
-    /** belows styles are working good */
-    padding: 2px 5px;
-    margin-top: 2px;
-    position: relative;
-    left: -28px;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
-    margin-bottom: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-right: 50px;
-    color:#52C8FA;
-}
-
 .search-query:focus + button {
     z-index: 3;   
+}
+
+.searchImg{
+    z-index: 99;
+    right: 2%;
+    top: 30%;
+    position: absolute;
+    font-size: 2.2rem;
+    cursor: pointer;
 }
