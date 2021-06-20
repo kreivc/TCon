@@ -23,6 +23,15 @@ body, html{
     margin-left: 10px;
 }
 
+.carousel-control{
+    opacity: 0.2;
+}
+.carousel-control:focus{
+    opacity: 0.2;
+}
+.carousel-control:hover{
+    opacity: 0.4;
+}
 
 .sign-in{
     padding: 12px 15px;
