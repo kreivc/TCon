@@ -55,10 +55,11 @@ var countDiv = document.getElementById("timer"), secpass,
 countDown = setInterval(function () {
     'use strict';
     secpass();
-    if(localStorage.getItem("countdown") == "0" && localStorage.getItem("isConsultant") == 0){
-        document.getElementById("type-msg").readonly = true;
+    // set readonly
+    if(parseInt(localStorage.getItem("countdown")) == 0 && localStorage.getItem("isConsultant") == 0){
+        document.getElementById("type-msg").readOnly = true;
     }else{
-        document.getElementById("type-msg").readonly = false;
+        document.getElementById("type-msg").readOnly = false;
     }
 }, 1000);
 
@@ -82,7 +83,7 @@ function secpass() {
         clearInterval(countDown);
         // localStorage.removeItem("countdown")
         countDiv.innerHTML = '00:00';
-        localStorage.setItem("countdown", "0")
+        localStorage.setItem("countdown", 0)
     }
 }
 
@@ -95,7 +96,7 @@ document.getElementById("end-chat").addEventListener("click", endChat)
 
 function endChat(){
     // localStorage.removeItem("countdown")
-    localStorage.setItem("countdown", "0")
+    localStorage.setItem("countdown", 0)
     window.open("rating.html", "_self");
 }
 
