@@ -68,7 +68,6 @@ body, html{
     padding: 20px 5px;
     margin: 0 70px 20px 70px;
     background-color: rgb(203, 208, 212);
-    
 }
 
 .feature{
@@ -81,13 +80,11 @@ body, html{
     overflow-y: auto;
     height: 500px;
     width: 340px;
-    /* background-color: red; */
 }
 
 .countdown{
     text-align: center;
     align-items: center;
-    border-radius: 25px;
 }
 
 .end-chat{
@@ -159,5 +156,5 @@ body, html{
 
 #timer{
     color: #748A9D;
-    border-radius: 2px;
+    border-radius: 20px;
 }
