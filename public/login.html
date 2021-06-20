@@ -11,17 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="JS/backtohome.js" defer></script>
     <script src="JS/validateLogin.js"></script>
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div class="content">
-        <div class="logo">
+        <div class="logo" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <a href="index.html">
                 <img src="assets/logoTCon.png" alt="">
             </a>
             <div>Ready To Consul?</div>
         </div>
-        <div class="content-wraper">
+        <div class="content-wraper" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <form method="GET">
                 <div class="login-form">
                     <label for="username"><b>Email :</b></label>
@@ -34,5 +34,9 @@
             </form>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

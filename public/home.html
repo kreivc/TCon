@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="css/home.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="JS/security.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <div class="header">
+    <div class="header" data-aos="slide-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div class="logo">
             <a href="home.html">
                 <img src="assets/logoTCon.png" alt="" width="80px">
@@ -33,13 +34,7 @@
       </div>
     </div>
 
-    <div class="content">
-        <section class="customer-logos slider" id="slider">
-            
-         </section>
-    </div>
-
-    <div class="content">
+    <div class="content" data-aos="fade-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div>
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -79,7 +74,7 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" data-aos="slide-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div class="wraper">
             <div class="footer-items">
                 <a href="myprofile.html">
@@ -101,5 +96,9 @@
         </div>
     </div>
     <script src="JS/Home.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

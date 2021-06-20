@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <div class="header">
+    <div class="header" data-aos="slide-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div class="logo">
-            <img src="assets/logoTCon.png" alt="" width="80px">
+            <a href="index.html">
+                <img src="assets/logoTCon.png" alt="" width="80px">
+            </a>
         </div>
         <div id="custom-search-input">
             <div class="input-group col-md-12">
@@ -27,14 +30,14 @@
         </div>
     </div>
 
-    <div class="content">
+    <div class="content" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div>
             <img src="assets/logoTCon.png" alt="">
             <div>TCon Make Our Live Easier</div>
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" data-aos="slide-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div class="wraper">
             <div class="footer-items">
                 <a href="#">
@@ -55,6 +58,9 @@
             </div>
         </div>
     </div>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

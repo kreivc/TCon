@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/myprofile.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <div class="header">
+    <div class="header" data-aos="slide-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div class="back">
             <a href="home.html">
                 <img src="assets/back.png" alt="" >
@@ -26,7 +26,7 @@
         <div></div>
     </div>
 
-    <div class="content">
+    <div class="content" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div class="content-wrapper">
             <div class="profile-wrapper">
                 <div class="profile">
@@ -43,35 +43,27 @@
                         <div>
                             <label for="firstName"><b>First Name :</b></label>
                             <p><input type="text" name="firstName" id="firstName" placeholder="First Name"></p>
-                            
                         </div>
-                       
                         <div>
                             <label for="lastName"><b>Last Name :</b></label>
                             <p><input type="text" name="lastName" id="lastName" placeholder="Last Name"></p>
-                            
                         </div>
                     </div>
-                   
                     <div class="phone-email">
                         <div>
                             <label for="email"><b>Email :</b></label>
                             <p><input type="email" name="email" id="email" placeholder="Email"></p>
-                            
                         </div>
                         <div>
                             <label for="phoneNumber"><b>Phone Number :</b></label>
                             <p><input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number"></p>
-                            
                         </div>
                     </div>               
-
                     <div class="pass">
                         <div class="password">
                             <label for="password"><b>Password :</b></label>
                             <p><input type="password" id="password" placeholder="Password"></p>
                         </div>
-                        
                     </div>
                     <p id="save" class="save-btn"><input type="reset" value="Save" class="button"></p>
                 </form>
@@ -79,7 +71,7 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" data-aos="slide-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div class="wraper">
             <div class="footer-items">
                 <a href="myprofile.html">
@@ -100,8 +92,10 @@
             </div>
         </div>
     </div>
-
     <script src="JS/myprofile.js"></script>
-      
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

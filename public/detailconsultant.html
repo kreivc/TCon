@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/logoTCon.png">
     <title>TCon</title>
-    
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/detailconsultant.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div class="header">
@@ -26,8 +25,8 @@
 
     <div class="content">
         <div class="content-wrapper">
-            <div class="content1">
-                <div class="name" id="name">William Tanuwijaya</div>
+            <div class="content1" data-aos="slide-right" data-aos-duration="700" data-aos-easing="ease-in-out">
+                <div class="name" id="name">Consultant</div>
                 <div class="pic">
                     <img src="assets/anonymus.jpg" alt="">
                 </div>
@@ -47,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content2">
+            <div class="content2"  data-aos="zoom-out-left" data-aos-duration="700" data-aos-easing="ease-in-out">
                 <div class="content2-1">
                     <div class="bio">
                         <div class="title">Bio</div>
@@ -85,6 +84,9 @@
         </div>
     </div>
     <script src="JS/detailconsultant.js"></script>
-      
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

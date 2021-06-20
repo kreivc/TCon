@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="JS/validateRegister.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div class="content">
         <form method="POST">
-            <div class="content-wraper">
+            <div class="content-wraper" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h1>Register Form</h1>
                 <div class="register-form">
                     <label for="firstName"><b>First Name :</b></label>
@@ -36,7 +37,7 @@
                     <p><input type="password" id="re-password" placeholder="Re-Password"></p>
                 </div>
             </div>
-            <div class="logo-wrapper">
+            <div class="logo-wrapper" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="logo">
                     <a href="index.html">
                         <img src="assets/logoTCon.png" alt="">
@@ -51,5 +52,9 @@
             </div>
         </form>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

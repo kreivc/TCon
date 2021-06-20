@@ -7,13 +7,13 @@
     <title>Chat</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     
     <div class="chat row">
-        <div class="side left">
+        <div class="side left" data-aos="fade-right" data-aos-delay="50" data-aos-duration="800" data-aos-easing="ease-in-out">
             <div class="column">
                 <div class="title-consultant row">
                     <a href="home.html">
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="side right">
+        <div class="side right" data-aos="fade-left" data-aos-delay="50" data-aos-duration="800" data-aos-easing="ease-in-out">
             <div class="column">
                 <div class="chating" id="chatting-box">
                     <!-- chat appends here -->
@@ -63,7 +63,10 @@
             </div>
         </div>
     </div>
-
     <script src="JS/Chat.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
