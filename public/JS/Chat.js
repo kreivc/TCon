@@ -55,14 +55,12 @@ var countDiv = document.getElementById("timer"), secpass,
 countDown = setInterval(function () {
     'use strict';
     secpass();
+    if(localStorage.getItem("countdown") == "0" && localStorage.getItem("isConsultant") == 0){
+        document.getElementById("type-msg").readonly = true;
+    }else{
+        document.getElementById("type-msg").readonly = false;
+    }
 }, 1000);
-
-
-if(localStorage.getItem("countdown") == "0" && localStorage.getItem("isConsultant") == 0){
-    document.getElementById("type-msg").readonly = true;
-}else{
-    document.getElementById("type-msg").readonly = false;
-}
 
 function secpass() {
     'use strict';
@@ -88,13 +86,15 @@ function secpass() {
     }
 }
 
+
+
 var chatList = document.getElementById("chatting-box");
 chatList.scrollTop = chatList.scrollHeight;
 
 document.getElementById("end-chat").addEventListener("click", endChat)
 
 function endChat(){
-    localStorage.removeItem("countdown")
+    // localStorage.removeItem("countdown")
     window.open("rating.html", "_self");
 }
 
