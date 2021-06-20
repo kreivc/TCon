@@ -18,40 +18,6 @@ function buildReceiverBubble(msg, tstamp){
 }
 
 
-const urlParams = new URLSearchParams(window.location.search);
-let currCID = urlParams.get('cid')
-
-var data = JSON.stringify({
-    "userId": localStorage.getItem("userId"),
-    "chatId": currCID
-});
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = false;
-
-xhr.open("POST", "https://tcon-api.herokuapp.com/user/getchatdetails", false);
-
-xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-xhr.setRequestHeader("Access-Control-Allow-Credentials", true)
-
-xhr.send(data);
-res = JSON.parse(xhr.responseText)
-stat = res["status"];
-result = res['result'];
-console.log(result)
-let parentAppend = "";
-for(let i=result.length-1; i>=0; i--){
-    if(result[i].isSender == 1){
-        parentAppend += buildSenderBubble(result[i].message, result[i].time)
-    }
-    else{
-        parentAppend += buildReceiverBubble(result[i].message, result[i].time)
-    }
-}
-
-document.getElementById("chatting-box").innerHTML = parentAppend;
-
-
 function sendChat(){
     msgToSend = document.getElementById("type-msg").value;
     if(msgToSend == ""){
@@ -84,14 +50,14 @@ function sendChat(){
 
 // timer
 
-
 var sec = parseInt(localStorage.getItem("countdown"));
 var countDiv = document.getElementById("timer"), secpass,
-
 countDown = setInterval(function () {
     'use strict';
     secpass();
 }, 1000);
+
+console.log(sec);
 
 // if(localStorage.getItem("countdown") == ""){
 //     document.getElementById("type-msg").disabled = true;
@@ -131,3 +97,51 @@ function endChat(){
     localStorage.removeItem("countdown")
     window.open("rating.html", "_self");
 }
+
+
+function updateChat(){
+    const urlParams = new URLSearchParams(window.location.search);
+    let currCID = urlParams.get('cid')
+    if(currCID == null){
+        alert("Empty Chat!");
+        window.open('home.html', "_self");
+        return;
+    }
+    var data = JSON.stringify({
+        "userId": localStorage.getItem("userId"),
+        "chatId": currCID
+    });
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = false;
+
+    xhr.open("POST", "https://tcon-api.herokuapp.com/user/getchatdetails", false);
+
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.setRequestHeader("Access-Control-Allow-Credentials", true)
+
+    xhr.send(data);
+    res = JSON.parse(xhr.responseText)
+    stat = res["status"];
+    result = res['result'];
+    console.log(result)
+    let parentAppend = "";
+    for(let i=result.length-1; i>=0; i--){
+        if(result[i].isSender == 1){
+            parentAppend += buildSenderBubble(result[i].message, result[i].time)
+        }
+        else{
+            parentAppend += buildReceiverBubble(result[i].message, result[i].time)
+        }
+    }
+
+    document.getElementById("chatting-box").innerHTML = parentAppend;
+    var element = document.getElementById("chatting-box");
+    element.scrollTop = element.scrollHeight;
+    return;
+}
+updateChat();
+let updateChatCountdown = setInterval(function () {
+    console.log("updating chat");
+    updateChat();
+}, 5000);
