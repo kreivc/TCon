@@ -95,6 +95,7 @@ document.getElementById("end-chat").addEventListener("click", endChat)
 
 function endChat(){
     // localStorage.removeItem("countdown")
+    localStorage.setItem("countdown", "0")
     window.open("rating.html", "_self");
 }
 
