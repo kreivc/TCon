@@ -1,3 +1,5 @@
+@import url(searching.css);
+
 body, html{
     margin: 0;
     padding: 0;
@@ -182,4 +184,12 @@ body, html{
 
 .search-query:focus + button {
     z-index: 3;   
+}
+
+.show{
+    display: contents;
+}
+
+.none{
+    display: none;
 }

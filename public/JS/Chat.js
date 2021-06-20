@@ -60,9 +60,9 @@ countDown = setInterval(function () {
 console.log(sec);
 
 // if(localStorage.getItem("countdown") == ""){
-//     document.getElementById("type-msg").disabled = true;
+//     document.getElementById("type-msg").style.display = "none";
 // }else{
-//     document.getElementById("type-msg").disabled = false;
+//     document.getElementById("type-msg").style.display = "flex";
 // }
 
 function secpass() {
