@@ -58,7 +58,7 @@ countDown = setInterval(function () {
 }, 1000);
 
 
-if(localStorage.getItem("countdown") == "" && localStorage.getItem("isConsultant") == 0){
+if(localStorage.getItem("countdown") == "0" && localStorage.getItem("isConsultant") == 0){
     document.getElementById("type-msg").readonly = true;
 }else{
     document.getElementById("type-msg").readonly = false;
@@ -82,8 +82,9 @@ function secpass() {
         localStorage.setItem("countdown", sec)
     } else {
         clearInterval(countDown);
-        localStorage.removeItem("countdown")
+        // localStorage.removeItem("countdown")
         countDiv.innerHTML = '00:00';
+        localStorage.setItem("countdown", "0")
     }
 }
 
