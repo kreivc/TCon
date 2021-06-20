@@ -57,13 +57,12 @@ countDown = setInterval(function () {
     secpass();
 }, 1000);
 
-console.log(sec);
 
-// if(localStorage.getItem("countdown") == ""){
-//     document.getElementById("type-msg").style.display = "none";
-// }else{
-//     document.getElementById("type-msg").style.display = "flex";
-// }
+if(localStorage.getItem("countdown") == "" && localStorage.getItem("isConsultant") == 0){
+    document.getElementById("type-msg").readonly = true;
+}else{
+    document.getElementById("type-msg").readonly = false;
+}
 
 function secpass() {
     'use strict';

@@ -148,5 +148,7 @@ body, html{
 .footer-items a{
     padding: 0 13px;
     text-decoration: none;
+    outline: none;
+    border: none;
 }
 

@@ -76,41 +76,49 @@ body, html{
 .footer-items a{
     padding: 0 13px;
     text-decoration: none;
+    outline: none;
+    border: none;
 }
 
 .info{
     padding: 12px 15px;
     margin-right: 20px;
     color: gray;
-  }
-  
-  .info .user {
+}
+
+.info .user {
     font-size: 20px;
-  }
-  
-  .info .user span{
+}
+
+.info .user span{
     color: #52C8FA;
     text-transform: capitalize;
-  }
-  
-  .info .logout{
+}
+
+.info .logout{
     text-align: center;
-  }
-  
-  .logout a{
+}
+
+.logout a{
     text-decoration: none;
     color: red;
-  }
+}
 
-  .slider a{
-      text-decoration: none;
-  }
+.slider a{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
 
-  .slider{
-      justify-content: center;
-  }
+.slider a:focus{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
 
-
+.slider{
+    justify-content: center;
+}
 
 .information{
     background-color: white;
@@ -138,8 +146,6 @@ body, html{
 }
 
 
-
-  
 #custom-search-input {
     margin:0;
     margin-top: 10px;

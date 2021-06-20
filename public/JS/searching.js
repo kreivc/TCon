@@ -1,7 +1,3 @@
-$(document).ready(function(){
-    //initialize();
-    // initializeSlick();
-});
 
 var username = localStorage.getItem("name");
 document.getElementById("username").innerHTML = username.split(" ")[0]; 
@@ -9,7 +5,6 @@ document.getElementById("username").innerHTML = username.split(" ")[0];
 function logout(){
     localStorage.clear();
 }
-
 
 
 const dataConsult = document.querySelector(".slider");
@@ -23,11 +18,9 @@ Http.onreadystatechange = () => {
         let temp= "";
         for (var i = 0; i < consultData.consultants.length; i++) {
             temp += profileConsultantData(consultData.consultants[i]);
-            // console.log(temp);
             dataConsult.innerHTML = temp;
         }
         initialize();
-        // initializeSlick(false);
     }
 }
 
@@ -44,39 +37,36 @@ function profileConsultantData(data) {
             `;
   }
 
- 
-
   var keyword = document.getElementById("keyword");
+
+  keyword.focus()
   
   keyword.addEventListener('keyup', function (e) {
-    var box = document.getElementById("slider");
-    box.style.display = "flex";
-      const Http = new XMLHttpRequest();
-      const url='https://tcon-api.herokuapp.com/consultant/getall';
-      Http.open('GET', url);
-      Http.send();
-      Http.onreadystatechange = () => {
-          if (Http.readyState == 4 && Http.status == 200) {
-              var consultData = JSON.parse(Http.responseText);
-              let temp= ""; 
-              console.log(keyword.value.toLowerCase());
-              for (var i = 0; i < consultData.consultants.length; i++) {
-              
-                var search = consultData.consultants[i].name.toLowerCase();
-                  if(search.includes(keyword.value.toLowerCase())){
-                      temp+= profileConsultantData(consultData.consultants[i]);
-                      dataConsult.innerHTML = temp;
-                      
-                  }
-              }
-            initialize();
-            //initializeSlick(false);
-          }  
-          
-      }
-  });
-
-
+var box = document.getElementById("slider");
+box.style.display = "flex";
+    const Http = new XMLHttpRequest();
+    const url='https://tcon-api.herokuapp.com/consultant/getall';
+    Http.open('GET', url);
+    Http.send();
+    Http.onreadystatechange = () => {
+        if (Http.readyState == 4 && Http.status == 200) {
+            var consultData = JSON.parse(Http.responseText);
+            let temp= ""; 
+            console.log(keyword.value.toLowerCase());
+            for (var i = 0; i < consultData.consultants.length; i++) {
+            
+            var search = consultData.consultants[i].name.toLowerCase();
+                if(search.includes(keyword.value.toLowerCase())){
+                    temp+= profileConsultantData(consultData.consultants[i]);
+                    dataConsult.innerHTML = temp;
+                    
+                }
+            }
+        initialize();
+        }  
+        
+    }
+});
   
 function initialize(){
     $('.customer-logos').slick({
@@ -122,18 +112,3 @@ const SLICK_SLIDER_SETTINGS = {
         }
     }]
 }
-
-function initializeSlick(init = true){
-    const slickSection = '.customer-logos'
-    if (init) {
-        $(slickSection).slick(SLICK_SLIDER_SETTINGS);
-        $(slickSection).slick('unslick'); 
-        return
-    }
-    $(slickSection).slick('unslick'); 
-    $(slickSection).slick(SLICK_SLIDER_SETTINGS);
- 
-}
-
-
-
