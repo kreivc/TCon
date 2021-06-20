@@ -1,5 +1,5 @@
 function buildChatBox(displayName, chatId){
-    console.log(displayName);
+    // console.log(displayName);
     str = `<a href="chat.html?cid=${chatId}" class="chat-item">
                 <div class="chat-item row">
                     <img src="assets/anonymus.jpg" alt="" width="60px">
@@ -28,7 +28,7 @@ result = res['result'];
 if(stat){
     let parentStr = "";
     for (let i=0; i<result.length; i++){
-        console.log(result[i]);
+        // console.log(result[i]);
         let tmp = result[i];
         let childstr = buildChatBox(tmp.friendNamme, tmp.chatId);
         parentStr += childstr;

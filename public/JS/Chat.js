@@ -1,3 +1,41 @@
+function updateFriendName(){
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    let currCID = urlParams.get('cid');
+
+    var data = JSON.stringify({
+        "userId": localStorage.getItem("userId")
+    });
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = false;
+
+    xhr.open("POST", "https://tcon-api.herokuapp.com/user/getchatheader", false);
+
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.setRequestHeader("Access-Control-Allow-Credentials", true)
+
+    xhr.send(data);
+    res = JSON.parse(xhr.responseText)
+    stat = res["status"];
+    result = res['result'];
+    if(stat){
+        for (let i=0; i<result.length; i++){
+            if(result[i]['chatId'].localeCompare(currCID)==0){
+                document.getElementById("consultant-name").innerHTML = result[i]['friendNamme'];
+                break;
+            }
+            else{
+                document.getElementById("consultant-name").innerHTML = "No Name";
+            }
+        }
+    }
+    else{
+        alert("chat not found!");
+        window.open("allChat.html", "_self");
+    }
+}
+updateFriendName();
+
 function buildSenderBubble(msg, tstamp){
     str =  `<div class="sender-chat chat-item">
                 <p>    
@@ -41,7 +79,7 @@ function sendChat(){
     res = JSON.parse(xhr.responseText)
     stat = res["status"];
     result = res['result'];
-    console.log(res);
+    // console.log(res);
     if(!stat){
         alert(result);
     }
@@ -126,7 +164,7 @@ function updateChat(){
     res = JSON.parse(xhr.responseText)
     stat = res["status"];
     result = res['result'];
-    console.log(result)
+    // console.log(result)
     let parentAppend = "";
     for(let i=result.length-1; i>=0; i--){
         if(result[i].isSender == 1){
@@ -144,6 +182,7 @@ function updateChat(){
 }
 updateChat();
 let updateChatCountdown = setInterval(function () {
-    console.log("updating chat");
+    // console.log("updating chat");
     updateChat();
 }, 5000);
+
